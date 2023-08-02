@@ -1,0 +1,25 @@
+<!--pages/home/index.wxml-->
+<view class="home-page">
+  <view class="user-info">
+    <view class="user-avatar">
+      <!-- <image class="avatar" src="https://avatars.githubusercontent.com/u/79403683?v=4" alt=""/> -->
+      <image class="camera" src="../../assets/camera.png" mode="" />
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      </button>
+      <image class="avatar" src="{{userInfo.user_avatar}}"></image>
+    </view>
+    <view class="user-name">
+      <input type="nickname" bindblur="handleInputChange" value="{{userInfo.user_name}}" placeholder="请输入昵称" />
+      <view class="name-tip">建议修改为微信头像和昵称</view>
+    </view>
+  </view>
+  <view class="action">
+  <button class="create-btn" bindtap="createRoom">创建房间</button>
+  <button class="create-btn" bindtap="onTest">getTest</button>
+  </view>
+ <view class="mask" wx:if="{{isLoding}}">
+  <van-loading color="#000"  vertical >
+    登陆中...
+  </van-loading>
+  </view>
+</view>

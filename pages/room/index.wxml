@@ -1,0 +1,45 @@
+<!--pages/room/index.wxml-->
+<view class="room-page">
+  <view class="room-title">{{userName}}和他的小伙伴的房间</view>
+  <view class="user-list">
+    <view class="items" wx:for="{{list}}" wx:key="index" bindtap="onTransferPopup" data-item="{{item}}">
+      <image src="{{item.url}}" mode="" />
+      <view class="user-name">{{item.name}}</view>
+      <view class="amount">￥{{item.amount}}</view>
+    </view>
+    <view wx:if="{{list.length<4}}" class="add-user items" bindtap="onAddUser">
+      <view class="add-icon">+</view>
+      <view class="user-name">添加好友</view>
+      <view class="amount"></view>
+    </view>
+  </view>
+  <view class="record">
+    <view class="record-list" wx:for="{{recordList}}" wx:key="index">{{item.msg}}</view>
+  </view>
+  <van-popup round="{{true}}" show="{{ isAddUserVisble }}" bind:close="onCloseAddUser">
+    <view class="add-user-content">
+      <view class="title">请扫码加入房间</view>
+      <image src="../../assets/share-qr.png" mode="" />
+      <view class="transmit">转发给好友</view>
+    </view>
+  </van-popup>
+  <van-popup round="{{true}}" show="{{ isTransferVisble }}" bind:close="onCloseTransfer">
+    <view class="transfer-content">
+      <view class="header">
+        <view class="user-info">
+          <image src="{{userInfo.url}}" mode="" />
+          <view class="name">{{userInfo.name}}</view>
+        </view>
+        <view class="transfer">
+          =>
+        </view>
+        <view class="user-info">
+          <image src="{{currentInfo.url}}" mode="" />
+          <view class="name">{{currentInfo.name}}</view>
+        </view>
+      </view>
+      <input class="transfer-input" bindinput="onAmount" value="{{amount}}" placeholder="请输入转账金额" type="number"></input>
+      <view class="transfer-btn" bindtap="onTransfer">支出</view>
+    </view>
+  </van-popup>
+</view>

@@ -1,0 +1,88 @@
+/* pages/home/index.wxss */
+.home-page {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 100px;
+  background: #f1ebdd;
+}
+.home-page .user-info {
+  width: 100%;
+  height: 100%;
+}
+.home-page .user-info .user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.home-page .user-info .user-avatar .avatar {
+  width: 100%;
+  height: 100%;
+}
+.home-page .user-info .user-avatar .camera {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.home-page .user-info .user-avatar .avatar-wrapper {
+  width: 100px !important;
+  height: 100px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.home-page .user-info .user-name {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+.home-page .user-info .user-name input {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.home-page .user-info .user-name .name-tip {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  color: #757373;
+}
+.home-page .action {
+  width: 100%;
+  margin-top: 100px;
+}
+.home-page .action .create-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  width: 80%;
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+  border-radius: 10px;
+}
+.home-page .mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page .mask .van-loading__text {
+  color: #000;
+}

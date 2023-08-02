@@ -1,0 +1,158 @@
+/* pages/room/index.wxss */
+.room-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1ebdd;
+  overflow: hidden;
+}
+.room-page .room-title {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 400;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.room-page .user-list {
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  font-size: 12px;
+}
+.room-page .user-list .items {
+  width: 20%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.room-page .user-list .items .amount {
+  color: orange;
+}
+.room-page .user-list .items image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.room-page .user-list .add-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+}
+.room-page .record {
+  width: 90%;
+  margin: 30px auto 0;
+  min-height: 300px;
+  max-height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.room-page .record .record-list {
+  padding: 0 5px;
+  background-color: #f2f2f2;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.room-page .add-user-content {
+  width: 80vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.room-page .add-user-content .title {
+  width: 100%;
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+}
+.room-page .add-user-content image {
+  width: 200px;
+  height: 200px;
+  margin: 20px 0;
+}
+.room-page .add-user-content .transmit {
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+.room-page .transfer-content {
+  width: 80vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+.room-page .transfer-content .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.room-page .transfer-content .header .user-info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.room-page .transfer-content .header .user-info image {
+  width: 60px;
+  height: 60px;
+}
+.room-page .transfer-content .transfer-input {
+  width: 80%;
+  border: 1px solid #000;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+.room-page .transfer-content .transfer-btn {
+  width: 80%;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
